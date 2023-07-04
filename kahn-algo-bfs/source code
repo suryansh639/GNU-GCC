@@ -1,0 +1,36 @@
+// kahn algorithm 
+// we use it in bfs traversal
+// these are only valid in DAG
+// for bfs we use stack
+
+// we will use indegree concept here which is incoming edges
+
+// first insert all nodes with indegree 0
+
+vector<int> toposort(int v,  vector<int> adj[]){
+    int indegree[V] ={0};
+    for (int i=0;i<v;i++)
+    {
+        for(auto it : adj[i]){
+            indegree[it]++;
+        }
+    }
+    queue<int> q;
+    for(int i=0;i<v;i++){
+        if(indegree[i] ==0){
+            q.push(i);
+        }
+    }
+    vector<int > topo;
+    while(!q.empty()){
+        int node - q.front();
+        q.pop();
+        top.push_back(node);
+        
+        for(auto it : adj[node]){
+            indegree[it]--;
+            if(indegree[it] == 0) q.push(it);
+        }
+    }
+    return topo;
+}

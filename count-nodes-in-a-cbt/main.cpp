@@ -30,3 +30,6 @@ int countnodes(treenode * root){
         return hgt;
     }
 }
+// the formula for it is given as A complete binary tree of height h is a proper binary tree up to height h-1, and in the 
+//last level element are stored in left to right order. The height of the given binary tree is 2 and the
+// maximum number of nodes in that tree is n= 2h+1-1 = 22+1-1 = 23-1 = 7. Hence we can conclude it is a perfect binary tree.

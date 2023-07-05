@@ -1,0 +1,36 @@
+// // INDExING OF THE NODES IS IMPORTANT HERE AND THEN level order traversal
+// // 2*i+1 
+// // 2*i+2
+// // but this can be overflow memory
+
+
+
+// TO SOLVE IT SET I=i=_Imaginary
+// queue ds lelo    last-first+1
+
+iif(!root)
+{
+    return 0;
+}
+int ans=0;
+queue<pair<treenode * , int>>q;
+q.push(root , 0);
+while(!q.empty()){
+    int size= q.size();
+    int mmin= q.front().second;
+    int first,last;
+    for(int i=0;i<size;i++){
+        int cur_id = q.front().second-mmin;
+        treenode * node=q.front().first;
+        q.pop();
+        if(i==0) first =cur_id;
+        if(i==size-1) last=cur_id;
+        if(node->left)
+        q.push({node->left , cur_id*2+1});
+        if(node->right)
+        q.push({node->right , cur_id*2+2});
+    }
+    ans = max(ans , last-first+1);
+}
+return ans;
+}

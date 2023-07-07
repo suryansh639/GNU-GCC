@@ -10,3 +10,4 @@ int minvalue(struct node* root){
     }
     return root->data;
 }
+// min in left and max in right

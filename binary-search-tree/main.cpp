@@ -3,7 +3,6 @@
 // // // // RIGHT SUBTREE-> BST
 
 // // // ideally duplicates not allowed in BST
-
 // // BST SEARCH TIME IS OF ORDER Olog2N
 
 // now we will search in a BST

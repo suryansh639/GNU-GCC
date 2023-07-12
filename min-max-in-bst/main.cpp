@@ -1,5 +1,6 @@
 // // min max in bst 
 
+
 int minvalue(struct node* root){
     if(root == NULL){
         return -1;
